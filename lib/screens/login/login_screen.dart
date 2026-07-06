@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../widgets/custom_button.dart';
 import '../../widgets/custom_textfield.dart';
+import 'package:aplikasi_kasir/screens/dashboard/dashboard_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -136,7 +137,14 @@ class _LoginScreenState extends State<LoginScreen> {
 
                       CustomButton(
                         text: "Masuk Sekarang",
-                        onPressed: () {},
+                        onPressed: () {
+  Navigator.pushReplacement(
+    context,
+    MaterialPageRoute(
+      builder: (_) => const DashboardScreen(),
+    ),
+  );
+},
                       ),
                     ],
                   ),
