@@ -21,7 +21,7 @@
     </queries>
 
     <application
-        android:label="aplikasi_kasir"
+        android:label="Kasir Doja.id"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         
