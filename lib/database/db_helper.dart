@@ -335,6 +335,26 @@ Future<List<Map<String, dynamic>>> searchTransactions(String keyword) async {
     );
   }
 
+  Future<int> updateFotoProduk(int id, String fotoPath) async {
+    final db = await database;
+    return await db.update(
+      'products',
+      {'fotoPath': fotoPath},
+      where: 'id = ?',
+      whereArgs: [id],
+    );
+  }
+
+  Future<int> updateHargaJual(int id, double hargaJual) async {
+    final db = await database;
+    return await db.update(
+      'products',
+      {'hargaJual': hargaJual},
+      where: 'id = ?',
+      whereArgs: [id],
+    );
+  }
+
 
 }
 
