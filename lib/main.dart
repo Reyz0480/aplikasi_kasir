@@ -22,6 +22,7 @@ import 'modules/product/atur_stok_screen.dart';
 import 'modules/settings/statistik_screen.dart';
 import 'modules/splash/splash_screen.dart';
 import 'modules/settings/tentang_aplikasi_screen.dart';
+import 'modules/settings/bantuan_faq_screen.dart';
    // tambahkan import
 
 void main() {
@@ -62,7 +63,8 @@ class MyApp extends StatelessWidget {
   GetPage(name: AppRoutes.riwayat, page: () => const RiwayatScreen()),
   GetPage(name: AppRoutes.aturStok, page: () => const AturStokScreen()),
   GetPage(name: AppRoutes.statistik, page: () => const StatistikScreen()),
-  GetPage(name: AppRoutes.tentangAplikasi, page: () => const TentangAplikasiScreen()),   // <-- pastikan baris ini ADA
+  GetPage(name: AppRoutes.tentangAplikasi, page: () => const TentangAplikasiScreen()),
+  GetPage(name: AppRoutes.bantuanFaq, page: () => const BantuanFaqScreen()),   // <-- pastikan baris ini ADA
 ],
     );
   }

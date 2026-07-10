@@ -10,9 +10,9 @@ class StoreInfoRepo {
     final prefs = await SharedPreferences.getInstance();
     return {
       'nama': prefs.getString(_kNama) ?? 'DOYAN JAJAN.ID',
-      'alamat': prefs.getString(_kAlamat) ?? 'Jl. Jajanan Enak No. 42, Jakarta Selatan',
-      'telepon': prefs.getString(_kTelepon) ?? '0812-XXXX-XXXX',
-      'instagram': prefs.getString(_kInstagram) ?? '@doja.id',
+      'alamat': prefs.getString(_kAlamat) ?? 'Jl. Sudirman Gg. Dempet Cinta Rakyat\nPercut Sei Tuan, Medan',
+      'telepon': prefs.getString(_kTelepon) ?? '0852-6199-6113',
+      'instagram': prefs.getString(_kInstagram) ?? '@doyanjajan.id',
     };
   }
 

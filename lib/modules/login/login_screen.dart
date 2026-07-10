@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../theme/app_colors.dart';
 import 'login_controller.dart';
+import 'package:flutter/gestures.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -287,6 +288,27 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                     ),
+                    const SizedBox(height: 16),
+
+Center(
+  child: RichText(
+    text: TextSpan(
+      style: const TextStyle(fontSize: 13, color: AppColors.textGrey),
+      children: [
+        const TextSpan(text: 'Belum Punya Akun? '),
+        TextSpan(
+          text: 'Hubungi Developer',
+          style: const TextStyle(
+            color: AppColors.accent,
+            fontWeight: FontWeight.w700,
+          ),
+          recognizer: TapGestureRecognizer()
+            ..onTap = controller.hubungiDeveloperDaftarAkun,
+        ),
+      ],
+    ),
+  ),
+),
                   ],
                 ),
               ),

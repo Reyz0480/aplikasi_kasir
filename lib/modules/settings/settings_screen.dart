@@ -166,6 +166,12 @@ _MenuTile(
   label: 'Tentang Aplikasi',
   onTap: () => Get.toNamed(AppRoutes.tentangAplikasi),
 ),
+const SizedBox(height: 12),
+_MenuTile(
+  icon: Icons.help_outline,
+  label: 'Bantuan & FAQ',
+  onTap: () => Get.toNamed(AppRoutes.bantuanFaq),
+),
 
               const SizedBox(height: 20),
 

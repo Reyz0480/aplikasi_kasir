@@ -11,5 +11,6 @@ abstract class AppRoutes {
   static const tambahProduk = '/tambah-produk';
   static const aturStok = '/atur-stok';
   static const struk = '/struk';
-  static const tentangAplikasi = '/tentang-aplikasi';   
+  static const tentangAplikasi = '/tentang-aplikasi';
+  static const bantuanFaq = '/bantuan-faq';   
 }

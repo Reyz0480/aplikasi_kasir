@@ -92,6 +92,24 @@ try {
     Get.offAllNamed(AppRoutes.dashboard);
   }
 
+
+  Future<void> hubungiDeveloperDaftarAkun() async {
+  const nomorDeveloper = '6281362685887';
+  final pesan = Uri.encodeComponent(
+    'Halo, saya ingin mendaftar akun kasir baru untuk aplikasi Doyan Jajan.id. Mohon bantuannya untuk pembuatan akun. Terima kasih.',
+  );
+  final url = Uri.parse('https://wa.me/$nomorDeveloper?text=$pesan');
+
+  try {
+    final berhasil = await launchUrl(url, mode: LaunchMode.externalApplication);
+    if (!berhasil) {
+      Get.snackbar('Gagal', 'Tidak bisa membuka WhatsApp', snackPosition: SnackPosition.TOP);
+    }
+  } catch (e) {
+    Get.snackbar('Gagal', 'WhatsApp tidak ditemukan di perangkat ini', snackPosition: SnackPosition.TOP);
+  }
+}
+
   @override
   void onClose() {
     usernameCtrl.dispose();
