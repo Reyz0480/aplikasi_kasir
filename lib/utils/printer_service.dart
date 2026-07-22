@@ -31,7 +31,7 @@ class PrinterService {
     await PrintBluetoothThermal.disconnect;
   }
 
-  Future<void> printStruk({
+  Future<bool> printStruk({
     required String namaToko,
     required String alamatToko,
     required String telepon,
@@ -114,9 +114,10 @@ class PrinterService {
     bytes += generator.text('Terima kasih sudah jajan!', styles: const PosStyles(align: PosAlign.center));
     bytes += generator.text('Semoga harimu semanis jajanannya.', styles: const PosStyles(align: PosAlign.center));
     bytes += generator.emptyLines(2);
-    bytes += generator.cut();
+    bytes += generator.emptyLines(3);
 
-    await PrintBluetoothThermal.writeBytes(Uint8List.fromList(bytes));
+    final berhasilKirim = await PrintBluetoothThermal.writeBytes(Uint8List.fromList(bytes));
+    return berhasilKirim;
   }
 
   String _rp(num value) {
